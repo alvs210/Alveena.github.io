@@ -1,61 +1,58 @@
-# Project Title
+# EDGAR - Poetry Chatbot
 
-One Paragraph of project description goes here
+A simple ChatBot that provides poems based on the user's emotions and also allows users to add emotions with corresponding poetry.
+You can use it here (Gmail account required): [EDGAR, The Poetry Bot](https://colab.research.google.com/drive/1tPSSPTP4n-p-GKTKaz8RkV04kJQtW5ly?usp=sharing)
 
-## Getting Started
+## Getting Started - Personal Chatbot!
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+You can either run this in your Google Colab notebook (suggested) or locally as a Python file.
 
-### Prerequisites
+## Prerequisites - Google Colab
 
-What things you need to install the software and how to install them
+Download the EDGARPoemsChatbot.ipynb file and upload it into your Google Colab notebook. 
+Save the PoetryIntents1234.json file into your own github or Google Drive.
 
-```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
+In the first code chunk of the EDGARPoemsChatbot.ipynb file, adjust 'file_path' to be the path to your copy of the PoetryIntents1234.json file.
 
 ```
-Give the example
+file_path = 'https://raw.githubusercontent.com/alvs210/PoetryChatter/main/PoetryIntents1234.json'
 ```
+If you saved the file in your github, then simply replace the present URL with the URL to the file in your github.
 
-And repeat
-
+If you saved the file in your Google Drive, this requires you to mount your Google Drive and direct a path to the file through your Google Drive.
+To mount your Google Drive, add this code chunk:
 ```
-until finished
+from google.colab import drive
+drive.mount('/content/drive')
 ```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
+Then replace the file_path with the path to the PoetryIntents1234.json file in your Drive. The code below should help!
 ```
-Give an example
+from google.colab import files
+uploaded = files.upload()
+
+import json
+with open('your_file_name.json', 'r') as f:
+  data = json.load(f)
 ```
+## Prerequisites - Local File
 
-### And coding style tests
+Download the .py file and the PoetryIntents1234.json file. You will need to adjust the code, as we did for the Google Colab file, to import and read the PoetryIntents1234.json file. Ensure both files are in the same current directory.
 
-Explain what these tests test and why
+You'll also need the followng installations!
 
 ```
-Give an example
+install nltk
+install tensorflow as tf
+install json
+install numpy as np
+install pandas as pd
+install pickle
+install random
+
 ```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
+## Roadmap
+## Data Pre-Processing
+## Chatbot Explanations
 ## Built With
 
 * [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
@@ -82,6 +79,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
+* [Hat tip to anyone whose code was used
 * Inspiration
-* etc
+* etc](https://github.com/vedrosuwandi/ChatBot)
