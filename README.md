@@ -1,9 +1,24 @@
 # EDGAR - Poetry Chatbot
 
-A simple intent-driven NLP ChatBot that provides poems based on the user's emotions and also allows users to add emotions with corresponding poetry.
+A simple intent-driven NLP ChatBot that provides poems based on the user's emotions and also allows users to add emotions with corresponding poetry, line by line. These new, added poems can then be accessed in the future by expressing the emotion that corresponds with them. 
+
 You can use it here (Gmail account required): [EDGAR, The Poetry Bot](https://colab.research.google.com/drive/1tPSSPTP4n-p-GKTKaz8RkV04kJQtW5ly?usp=sharing)
 
-## Getting Started - Personal Chatbot!
+
+Tell it how you feel (ex. I feel sad, I feel joy) to recieve a poem that'll fit the mood.
+Feel free to add new poems. He'll tell you how!
+
+If you get sick of him at any time, say "quit"
+
+To begin:
+1.  Click "Runtime" in the toolbar above.
+2.  Click "Run all"
+
+And chat away! :)
+
+The final poetry dataset including your changes will be automatically downloaded to the browser at the end. Feel free to not save it.
+
+## Getting Started - Get a Personal Poetry Chatbot!
 
 You can either run this in your Google Colab notebook (suggested) or locally as a Python file.
 
@@ -50,13 +65,10 @@ install pickle
 install random
 
 ```
-## Roadmap
-
-Details on how this project came to be :)
 
 ## Data Pre-Processing
 
-I downloaded [this](https://commons.datacite.org/doi.org/10.17632/n9vbc8g9cx.1) poetry dataset with various poems organized based on the 'Navarasa' emotion classification system, which consists of nine primary emotions such as Love, Sad, Anger, Hate, Fear, Surprise, Courage, Joy, and Peace.
+I downloaded [this](https://commons.datacite.org/doi.org/10.17632/n9vbc8g9cx.1) poetry dataset with various poems organized based on the 'Navarasa' emotion classification system, which consists of nine primary emotions such as Love, Sad, Anger, Hate, Fear, Surprise, Courage, Joy, and Peace. I continued to add more emotions as I interacted with EDGAR.
 
 I first cleaned the data through the simple and basic CleanData.py, which got rid of NaN values, removed the first row that is a header, and then separated the poems and their emotions into two columns, one for poems one for emotions.
 
@@ -66,10 +78,12 @@ I then passed the cleaned dataset into IntentsCreator.py, which is uses the inte
 - "patterns," which are examples or phrases that can be matched to a particular intent and indicate the intent of the user's input (indicates emotion)
 - "responses," which are a pool of potential responses the Chatbot can choose from; each intent has its own pool of responses (poems for each emotion)
 
-## Chatbot Explanation
+## Future Improvements
+
+- Implement a continuation of conversation after a poem is provided (ex. give me a sadder poem)
+- Search for a poem based on a word from that poem, author, etc.
+- Organize and find poems according to their rhythm, length, and more
 
 ## Acknowledgments
 
-* [Hat tip to anyone whose code was used
-* Inspiration
-* etc](https://github.com/vedrosuwandi/ChatBot)
+- 
