@@ -1,6 +1,6 @@
 # EDGAR - Poetry Chatbot
 
-A simple ChatBot that provides poems based on the user's emotions and also allows users to add emotions with corresponding poetry.
+A simple intent-driven NLP ChatBot that provides poems based on the user's emotions and also allows users to add emotions with corresponding poetry.
 You can use it here (Gmail account required): [EDGAR, The Poetry Bot](https://colab.research.google.com/drive/1tPSSPTP4n-p-GKTKaz8RkV04kJQtW5ly?usp=sharing)
 
 ## Getting Started - Personal Chatbot!
@@ -51,31 +51,22 @@ install random
 
 ```
 ## Roadmap
+
+Details on how this project came to be :)
+
 ## Data Pre-Processing
-## Chatbot Explanations
-## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+I downloaded [this](https://commons.datacite.org/doi.org/10.17632/n9vbc8g9cx.1) poetry dataset with various poems organized based on the 'Navarasa' emotion classification system, which consists of nine primary emotions such as Love, Sad, Anger, Hate, Fear, Surprise, Courage, Joy, and Peace.
 
-## Contributing
+I first cleaned the data through the simple and basic CleanData.py, which got rid of NaN values, removed the first row that is a header, and then separated the poems and their emotions into two columns, one for poems one for emotions.
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+I then passed the cleaned dataset into IntentsCreator.py, which is uses the intents/patterns/responses framework for NLP processing.
+  This framework consists of 
+- "intents," which represent to a goal or objective the user wants to achieve (in our case, it corresponds to an emotion);
+- "patterns," which are examples or phrases that can be matched to a particular intent and indicate the intent of the user's input (indicates emotion)
+- "responses," which are a pool of potential responses the Chatbot can choose from; each intent has its own pool of responses (poems for each emotion)
 
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+## Chatbot Explanation
 
 ## Acknowledgments
 
