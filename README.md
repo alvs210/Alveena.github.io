@@ -86,4 +86,8 @@ I then passed the cleaned dataset into IntentsCreator.py, which is uses the inte
 
 ## Acknowledgments
 
-- 
+This project would not be possible without:
+- [A Simple Chatbot by Vedro](https://github.com/vedrosuwandi/ChatBot)
+- [Medium Article](https://handsonai.medium.com/build-a-chat-bot-from-scratch-using-python-and-tensorflow-fd189bcfae45)
+- [A Very In-Depth Tutorial](https://pythonprogramming.net/chatbot-deep-learning-python-tensorflow/#google_vignette) that I didn't end up using but was very fun to read
+- And Gemini and ChatGPT used for debugging, code evaluation, etc.!
