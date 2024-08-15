@@ -4,15 +4,14 @@ A simple intent-driven NLP ChatBot that provides poems based on the user's emoti
 
 You can use it here (Gmail account required): [EDGAR, The Poetry Bot](https://colab.research.google.com/drive/1tPSSPTP4n-p-GKTKaz8RkV04kJQtW5ly?usp=sharing)
 
+To begin:
+1.  Click "Runtime" in the toolbar above.
+2.  Click "Run all"
 
 Tell it how you feel (ex. I feel sad, I feel joy) to recieve a poem that'll fit the mood.
 Feel free to add new poems. He'll tell you how!
 
 If you get sick of him at any time, say "quit"
-
-To begin:
-1.  Click "Runtime" in the toolbar above.
-2.  Click "Run all"
 
 And chat away! :)
 
